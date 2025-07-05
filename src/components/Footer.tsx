@@ -1,10 +1,11 @@
+import { Instagram, Twitter, Linkedin, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   const socialLinks = [
-    { name: "واتساب", url: "#", icon: "💬" },
-    { name: "تويتر", url: "#", icon: "🐦" },
-    { name: "لينكد إن", url: "#", icon: "💼" },
-    { name: "إنستغرام", url: "#", icon: "📷" }
+    { name: "واتساب", url: "#", icon: <MessageCircle size={24} /> },
+    { name: "تويتر", url: "#", icon: <Twitter size={24} /> },
+    { name: "لينكد إن", url: "#", icon: <Linkedin size={24} /> },
+    { name: "إنستغرام", url: "#", icon: <Instagram size={24} /> }
   ];
 
   const quickLinks = [
@@ -41,7 +42,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.url}
-                  className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors duration-300 text-xl"
+                  className="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors duration-300"
                   aria-label={social.name}
                 >
                   {social.icon}

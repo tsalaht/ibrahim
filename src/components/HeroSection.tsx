@@ -39,9 +39,10 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            <span className="text-gray-800">مؤسسة</span>
+            <span className="text-gray-800 mb-2">مؤسسة</span>
             <br />
-            <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+            <br />
+            <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent mt-2">
               إبراهيم أسعد
             </span>
           </h1>
@@ -75,7 +76,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-[-40px] md:bottom-[-50px] left-1/2 transform -translate-x-1/2 animate-bounce">
           <ArrowDown className="w-6 h-6 text-blue-600" />
         </div>
       </div>

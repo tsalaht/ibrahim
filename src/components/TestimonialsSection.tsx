@@ -1,10 +1,9 @@
-
 import { useEffect, useRef, useState } from "react";
 
 const TestimonialsSection = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef(null);
 
   const testimonials = [
     {
@@ -19,7 +18,7 @@ const TestimonialsSection = () => {
       position: "مالكة متجر الأزياء الراقية",
       content: "تطبيق المتجر الذي طوروه لي ساعدني كثيراً في زيادة المبيعات وتحسين تجربة العملاء. أنصح بالتعامل معهم.",
       rating: 5,
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face"
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
     },
     {
       name: "خالد السعيد",
@@ -63,16 +62,16 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-slate-50" ref={sectionRef}>
+    <section className="py-12 md:py-20 bg-gradient-to-br from-blue-50 to-slate-50" ref={sectionRef}>
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
             <span className="text-gray-800">آراء </span>
             <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
               عملائنا
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
             نفتخر بثقة عملائنا ورضاهم عن خدماتنا المتميزة
           </p>
         </div>
@@ -81,44 +80,44 @@ const TestimonialsSection = () => {
           <div className={`transform transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}>
-            <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-20 h-20 bg-blue-600/10 rounded-full -translate-x-10 -translate-y-10"></div>
-              <div className="absolute bottom-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full translate-x-16 translate-y-16"></div>
+            <div className="bg-white rounded-3xl shadow-xl p-6 md:p-12 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-16 md:w-20 h-16 md:h-20 bg-blue-600/10 rounded-full -translate-x-10 -translate-y-10"></div>
+              <div className="absolute bottom-0 right-0 w-24 md:w-32 h-24 md:h-32 bg-blue-600/10 rounded-full translate-x-12 md:translate-x-16 translate-y-12 md:translate-y-16"></div>
               
               <div className="relative z-10">
-                <div className="flex items-center gap-6 mb-8">
+                <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 mb-6 md:mb-8">
                   <img
                     src={testimonials[activeTestimonial].avatar}
                     alt={testimonials[activeTestimonial].name}
-                    className="w-16 h-16 rounded-full object-cover border-4 border-blue-100"
+                    className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-4 border-blue-100"
                   />
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-800">
+                  <div className="text-center md:text-right">
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-800">
                       {testimonials[activeTestimonial].name}
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-sm md:text-base text-gray-600">
                       {testimonials[activeTestimonial].position}
                     </p>
                   </div>
                   <div className="mr-auto flex gap-1">
                     {[...Array(testimonials[activeTestimonial].rating)].map((_, i) => (
-                      <span key={i} className="text-yellow-400 text-xl">⭐</span>
+                      <span key={i} className="text-yellow-400 text-lg md:text-xl">⭐</span>
                     ))}
                   </div>
                 </div>
 
-                <blockquote className="text-lg md:text-xl text-gray-700 leading-relaxed italic mb-8">
+                <blockquote className="text-base md:text-xl text-gray-700 leading-relaxed italic mb-6 md:mb-8">
                   "{testimonials[activeTestimonial].content}"
                 </blockquote>
 
-                <div className="flex justify-center gap-3">
+                <div className="flex justify-center gap-2 md:gap-3">
                   {testimonials.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setActiveTestimonial(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
                         index === activeTestimonial 
-                          ? "bg-blue-600 w-8" 
+                          ? "bg-blue-600 w-6 md:w-8" 
                           : "bg-blue-200 hover:bg-blue-300"
                       }`}
                     />

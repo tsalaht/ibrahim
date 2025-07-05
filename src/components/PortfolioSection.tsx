@@ -24,7 +24,7 @@ const PortfolioSection = () => {
       title: "موقع شركة طبية",
       category: "تصميم UI/UX",
       description: "موقع طبي بتصميم احترافي وتجربة مستخدم ممتازة",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=500&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop",
       tech: ["Figma", "Adobe XD", "Photoshop"]
     },
     {

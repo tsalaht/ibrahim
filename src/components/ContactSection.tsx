@@ -24,7 +24,7 @@ const ContactSection = () => {
     {
       icon: "📞",
       title: "اتصل بنا",
-      details: "+966 50 123 4567",
+      details: "00962782950000",
       subDetails: "من السبت إلى الخميس 9ص - 6م"
     },
     {
@@ -36,7 +36,7 @@ const ContactSection = () => {
     {
       icon: "📍",
       title: "موقعنا",
-      details: "الرياض، المملكة العربية السعودية",
+      details: "الرصيفه الجبل الشمالي مجمع عمار موبايل الطابق الاول ، المملكة الأردنية ",
       subDetails: "يمكنك زيارتنا بموعد مسبق"
     }
   ];
@@ -143,15 +143,15 @@ const ContactSection = () => {
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   رسالتك *
                 </label>
-                <Textarea
-                  id="message"
-                  required
-                  rows={5}
-                  value={formData.message}
-                  onChange={(e) => setFormData({...formData, message: e.target.value})}
-                  className="w-full p-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 transition-colors resize-none"
-                  placeholder="أخبرنا عن مشروعك أو استفسارك..."
-                />
+            <Textarea
+  id="message"
+  required
+  rows={5}
+  value={formData.message}
+  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+  className="w-full p-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none focus:ring-0 focus:shadow-none transition-colors resize-none"
+  placeholder="أخبرنا عن مشروعك أو استفسارك..."
+/>
               </div>
 
               <Button
