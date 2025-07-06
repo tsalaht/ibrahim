@@ -33,7 +33,10 @@ const FloatingNavbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <img src="/logo.png" alt="Logo" className="w-28 h-auto" />
+          <div className="flex items-center justify-center px-3 py-2 bg-white rounded-md">
+
+          <img src="/logo.png" alt="Logo" className="md:w-28 h-auto w-20" />
+          </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
@@ -92,7 +95,7 @@ const FloatingNavbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 flex flex-col items-end gap-4">
+          <div className="md:hidden mt-4 pb-4 flex flex-col items-center gap-4">
             <button
               onClick={() => scrollToSection("home")}
               className="text-white transition-colors"

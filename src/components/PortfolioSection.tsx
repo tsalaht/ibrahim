@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from "react";
 
 const PortfolioSection = () => {
@@ -7,46 +6,52 @@ const PortfolioSection = () => {
 
   const projects = [
     {
-      title: "متجر إلكتروني متطور",
+      title: "مطعم أبو زغلة",
       category: "تطوير ويب",
-      description: "منصة تجارة إلكترونية متكاملة مع نظام إدارة شامل",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop",
-      tech: ["React", "Node.js", "MongoDB"]
+      description: "مطاعم أبو زغلة: موقع ويب لمطاعم تقدم مأكولات طازجة",
+      image: "/1.png",
+      tech: ["React", "Node.js", "tailwindcss"],
+      link: "https://abuzaghleh.com/"
     },
     {
-      title: "تطبيق إدارة المشاريع",
-      category: "تطبيق موبايل",
-      description: "تطبيق ذكي لإدارة المشاريع والفرق بطريقة فعالة",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop",
-      tech: ["React Native", "Firebase", "Redux"]
-    },
-    {
-      title: "موقع شركة طبية",
-      category: "تصميم UI/UX",
-      description: "موقع طبي بتصميم احترافي وتجربة مستخدم ممتازة",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop",
-      tech: ["Figma", "Adobe XD", "Photoshop"]
-    },
-    {
-      title: "نظام إدارة المطاعم",
-      category: "حلول رقمية",
-      description: "نظام متكامل لإدارة المطاعم والطلبات والمخزون",
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&h=300&fit=crop",
-      tech: ["Vue.js", "Laravel", "MySQL"]
-    },
-    {
-      title: "منصة تعليمية تفاعلية",
+      title: "Acolux Smart",
       category: "تطوير ويب",
-      description: "منصة تعليم إلكتروني مع أدوات تفاعلية متقدمة",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&h=300&fit=crop",
-      tech: ["Angular", "Express", "Socket.io"]
+      description: "Acolux Smart: موقع ويب لإضاءة ذكية مبتكرة",
+      image: "/2.png",
+      tech: ["React", "Redux", "tailwindcss"],
+      link: "https://acoluxsmart.com/"
     },
     {
-      title: "تطبيق اللياقة البدنية",
-      category: "تطبيق موبايل",
-      description: "تطبيق شامل لمتابعة اللياقة البدنية والتغذية",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop",
-      tech: ["Flutter", "Dart", "Firebase"]
+      title: "سكني جو",
+      category: " تطوير ويب",
+      description: "سكني جو: موقع ويب لعقارات فاخرة متنوعة",
+      image: "/3.png",
+      tech: ["wordPress", "Node.js", "css"],
+      link: "https://alqudsestate.com/%d8%b3%d9%83%d9%86%d9%8a-%d8%ac%d9%88/"
+    },
+    {
+      title: "Russian Center Clinics",
+      category: " تطوير ويب",
+      description: "Russian Center Clinics: موقع ويب لعيادات طبية متخصصة",
+      image: "/4.png",
+      tech: ["Next js", "Node.js", "tailwindcss"],
+      link: "https://russiancenterclinics.com/"
+    },
+    {
+      title: "Ashley Perfume",
+      category: "تطوير ويب",
+      description: "Ashley Perfume: موقع ويب لعطور فاخرة متنوعة",
+      image: "/5.png",
+      tech: ["React", "Express", "Socket.io"],
+      link: "https://ashleyperfume.shop/"
+    },
+    {
+      title: "Al Shafi Dairy",
+      category: "تطوير ويب",
+      description: "Al Shafi Dairy: موقع ويب لمنتجات ألبان طازجة",
+      image: "/6.png",
+      tech: ["Next js", "Node.js", "tailwindcss"],
+      link: "https://alshafidairy.com/"
     }
   ];
 
@@ -108,15 +113,15 @@ const PortfolioSection = () => {
                 </div>
               </div>
               
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
+              <div className="p-6 flex flex-col gap-4">
+                <h3 className="text-xl font-bold text-gray-800">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {project.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
@@ -128,6 +133,15 @@ const PortfolioSection = () => {
                 </div>
                 
                 <div className="w-full h-1 bg-gradient-to-r from-blue-600 to-blue-800 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center bg-blue-600 text-white py-2 rounded-full hover:bg-blue-700 transition-colors duration-300"
+                >
+                  زيارة الموقع
+                </a>
               </div>
             </div>
           ))}

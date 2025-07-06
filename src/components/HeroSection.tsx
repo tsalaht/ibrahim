@@ -39,22 +39,20 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            <span className="text-gray-800 mb-2">مؤسسة</span>
-            <br />
-            <br />
+          
             <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent mt-2">
-              إبراهيم أسعد
+          كريبتون
             </span>
           </h1>
           
           <div className="text-xl md:text-2xl text-gray-600 mb-8 h-8">
             <span className="inline-block animate-fade-in">
-              لخدمات {texts[currentText]}
+               لخدمات الويب المتكامله
             </span>
           </div>
 
           <p className="text-lg md:text-xl text-gray-600 mb-12 leading-relaxed animate-fade-in delay-500">
-            نحن متخصصون في تقديم الحلول الرقمية المتطورة والمبتكرة التي تساعد عملك على النمو والازدهار في العالم الرقمي
+   نحن متخصصون في تقديم الحلول الرقمية المتطورة والمبتكرة التي تساعد عملك على النمو والازدهار في العالم الرقمي
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in delay-700">
