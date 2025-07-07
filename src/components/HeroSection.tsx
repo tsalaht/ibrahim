@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
@@ -31,28 +30,51 @@ const HeroSection = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Background Animation */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/20 rounded-full animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-500/20 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-300/10 rounded-full animate-ping"></div>
+        {/* Gradient Background Transition */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-blue-200/20 to-blue-300/30 animate-gradient-bg"></div>
+
+        {/* Animated Shapes */}
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/20 rounded-full animate-smooth-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-500/20 rounded-full animate-smooth-pulse delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-300/10 rounded-full animate-smooth-ping"></div>
+        <div className="absolute top-20 left-10 w-48 h-48 bg-blue-600/15 rounded-[20%] animate-smooth-spin"></div>
+        <div className="absolute bottom-20 right-20 w-56 h-56 bg-blue-700/10 rounded-[30%] animate-smooth-float"></div>
+
+        {/* Particle Effect */}
+        <div className="absolute inset-0 pointer-events-none">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute bg-blue-400/30 rounded-full animate-smooth-particle"
+              style={{
+                width: `20px`,
+                height: `20px`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDuration: `${Math.random() * 20 + 15}s`,
+                animationDelay: `${Math.random() * 10}s`,
+              }}
+            ></div>
+          ))}
+        </div>
       </div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-          
-            <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent mt-2">
-          كريبتون
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in mt-[-200px]">
+            <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              كريبتون
             </span>
           </h1>
           
           <div className="text-xl md:text-2xl text-gray-600 mb-8 h-8">
             <span className="inline-block animate-fade-in">
-               لخدمات الويب المتكامله
+              لخدمات الويب المتكامله
             </span>
           </div>
 
           <p className="text-lg md:text-xl text-gray-600 mb-12 leading-relaxed animate-fade-in delay-500">
-   نحن متخصصون في تقديم الحلول الرقمية المتطورة والمبتكرة التي تساعد عملك على النمو والازدهار في العالم الرقمي
+            نحن متخصصون في تقديم الحلول الرقمية المتطورة والمبتكرة التي تساعد عملك على النمو والازدهار في العالم الرقمي
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in delay-700">

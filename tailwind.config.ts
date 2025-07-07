@@ -87,11 +87,41 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				    'gradient-bg': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+        'smooth-pulse': {
+          '0%, 100%': { transform: 'scale(1)', opacity: '0.2' },
+          '50%': { transform: 'scale(1.2)', opacity: '0.4' },
+        },
+        'smooth-ping': {
+          '0%, 100%': { transform: 'scale(1)', opacity: '0.1' },
+          '50%': { transform: 'scale(1.3)', opacity: '0.2' },
+        },
+        'smooth-spin': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        'smooth-float': {
+          '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+          '50%': { transform: 'translateY(-30px) rotate(3deg)' },
+        },
+        'smooth-particle': {
+          '0%': { transform: 'translateY(0) scale(1)', opacity: '0.5' },
+          '100%': { transform: 'translateY(-120vh) scale(0.8)', opacity: '0' },
+        },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'gradient-bg': 'gradient-bg 20s ease-in-out infinite',
+        'smooth-pulse': 'smooth-pulse 10s ease-in-out infinite',
+        'smooth-ping': 'smooth-ping 12s ease-in-out infinite',
+        'smooth-spin': 'smooth-spin 30s linear infinite',
+        'smooth-float': 'smooth-float 8s ease-in-out infinite',
+        'smooth-particle': 'smooth-particle 25s linear infinite',
 			}
 		}
 	},
